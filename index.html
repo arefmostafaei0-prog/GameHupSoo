@@ -1,14 +1,8 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
-
 <head>
-
   <meta charset="UTF-8">
-
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>GameHupSoo | دنیای بازی</title>
 
@@ -18,7 +12,6 @@
   >
 
   <style>
-
     * {
       box-sizing: border-box;
       margin: 0;
@@ -41,11 +34,9 @@
     }
 
     button,
-    input,
-    textarea {
+    input {
       font-family: inherit;
     }
-
 
     /* =========================
        HEADER
@@ -79,7 +70,6 @@
       color: #ff3b30;
     }
 
-
     /* =========================
        SEARCH
     ========================== */
@@ -110,11 +100,8 @@
     .search:focus {
       background: #ffffff;
       border-color: #222222;
-
-      box-shadow:
-        0 5px 20px rgba(0, 0, 0, 0.08);
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
     }
-
 
     /* =========================
        WELCOME
@@ -154,15 +141,13 @@
       font-size: 15px;
     }
 
-
     /* =========================
-       COOPERATION
+       COOPERATION SLIDE
     ========================== */
 
     .cooperation-wrapper {
       max-width: 1100px;
       margin: 10px auto 45px;
-
       padding: 0 20px;
     }
 
@@ -245,13 +230,9 @@
 
     .cooperation a:hover {
       transform: translateY(-3px);
-
       background: #000;
-
-      box-shadow:
-        0 10px 25px rgba(0, 0, 0, 0.18);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
     }
-
 
     /* =========================
        GAMES
@@ -260,13 +241,11 @@
     .games {
       max-width: 1100px;
       margin: auto;
-
       padding: 20px;
     }
 
     .section-title {
       display: flex;
-
       align-items: center;
       justify-content: space-between;
 
@@ -290,7 +269,6 @@
 
       gap: 22px;
     }
-
 
     /* =========================
        GAME CARD
@@ -336,8 +314,7 @@
 
       background: #eeeeee;
 
-      transition:
-        transform 0.4s ease;
+      transition: transform 0.4s ease;
     }
 
     .game-card:hover img {
@@ -400,7 +377,6 @@
       color: #fff;
     }
 
-
     /* =========================
        NO RESULT
     ========================== */
@@ -420,17 +396,23 @@
       margin-top: 20px;
     }
 
-
     /* =========================
-       GAME DETAILS PAGE
+       GAME DETAILS
     ========================== */
 
-    .game-page {
-      max-width: 900px;
+    .page {
+      display: none;
+    }
 
+    .page.active {
+      display: block;
+    }
+
+    .details-page,
+    .download-page {
+      max-width: 1000px;
       margin: auto;
-
-      padding: 40px 20px 60px;
+      padding: 35px 20px 60px;
     }
 
     .back-button {
@@ -440,15 +422,16 @@
 
       padding: 9px 18px;
 
-      background: #f3f3f3;
-      color: #222;
-
       border-radius: 12px;
+
+      background: #f2f2f2;
+      color: #222;
 
       font-size: 13px;
       font-weight: bold;
 
-      transition: 0.2s;
+      cursor: pointer;
+      border: 0;
     }
 
     .back-button:hover {
@@ -456,100 +439,148 @@
       color: #fff;
     }
 
-    .game-hero {
+    .game-profile {
       text-align: center;
+      padding: 30px 20px;
+
+      border-radius: 25px;
+
+      background: linear-gradient(
+        135deg,
+        #f7f7f7,
+        #eeeeee
+      );
+
+      border: 1px solid #e5e5e5;
+
+      box-shadow:
+        0 15px 45px rgba(0, 0, 0, 0.07);
     }
 
-    .game-profile {
-      width: 180px;
-      height: 180px;
+    .game-profile img {
+      width: 150px;
+      height: 150px;
 
       object-fit: cover;
 
-      border-radius: 35px;
+      border-radius: 30px;
 
       display: block;
 
-      margin: 0 auto 20px;
+      margin: 0 auto 18px;
 
       box-shadow:
-        0 15px 40px rgba(0, 0, 0, 0.15);
+        0 12px 30px rgba(0, 0, 0, 0.15);
     }
 
-    .game-hero h1 {
-      font-size: 30px;
-      margin-bottom: 20px;
+    .game-profile h1 {
+      font-size: 28px;
+      margin-bottom: 8px;
+    }
+
+    .game-profile p {
+      color: #777;
+      font-size: 14px;
     }
 
     .download-box {
-      margin: 20px auto 35px;
+      margin-top: 25px;
 
       padding: 25px;
 
-      border-radius: 22px;
+      border-radius: 20px;
 
-      background: #f6f6f6;
+      background: #fff;
 
       border: 1px solid #eeeeee;
+
+      box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.05);
+
+      text-align: center;
     }
 
-    .download-button {
+    .download-box h2 {
+      font-size: 21px;
+      margin-bottom: 8px;
+    }
+
+    .download-box p {
+      color: #777;
+      font-size: 13px;
+      margin-bottom: 18px;
+    }
+
+    .main-button {
       display: inline-block;
 
-      width: 100%;
+      padding: 13px 28px;
 
-      padding: 14px 20px;
-
+      border: 0;
       border-radius: 14px;
 
       background: #222;
       color: #fff;
 
+      font-size: 14px;
       font-weight: bold;
 
-      transition: 0.2s;
+      cursor: pointer;
+
+      transition: 0.25s;
     }
 
-    .download-button:hover {
+    .main-button:hover {
+      transform: translateY(-3px);
       background: #000;
 
-      transform: translateY(-2px);
+      box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.18);
     }
 
-    .gallery-title,
-    .details-title {
-      margin-bottom: 15px;
+    /* =========================
+       SCREENSHOTS
+    ========================== */
 
+    .screenshots-section {
+      margin-top: 30px;
+    }
+
+    .screenshots-section h2 {
+      margin-bottom: 15px;
       font-size: 21px;
     }
 
-    .gallery {
+    .screenshots {
       display: grid;
 
       grid-template-columns:
         repeat(3, 1fr);
 
-      gap: 12px;
-
-      margin-bottom: 35px;
+      gap: 15px;
     }
 
-    .gallery img {
+    .screenshots img {
       width: 100%;
-
-      height: 190px;
+      height: 220px;
 
       object-fit: cover;
 
-      border-radius: 16px;
+      border-radius: 18px;
 
-      background: #eeeeee;
+      border: 1px solid #eeeeee;
+
+      background: #f3f3f3;
     }
 
-    .game-section {
-      padding: 25px;
+    /* =========================
+       INFORMATION SECTIONS
+    ========================== */
 
-      margin-bottom: 25px;
+    .info-section {
+      margin-top: 30px;
+
+      padding: 25px;
 
       border-radius: 20px;
 
@@ -558,169 +589,192 @@
       border: 1px solid #eeeeee;
     }
 
-    .game-section h2 {
+    .info-section h2 {
       margin-bottom: 12px;
-
       font-size: 20px;
     }
 
-    .game-section p {
+    .info-section p {
       color: #666;
-
       font-size: 14px;
     }
 
+    .advertisement {
+      margin-top: 30px;
+
+      min-height: 120px;
+
+      display: flex;
+
+      align-items: center;
+      justify-content: center;
+
+      border-radius: 20px;
+
+      border: 1px dashed #cccccc;
+
+      background: #fafafa;
+
+      color: #999;
+    }
 
     /* =========================
        GAME DETAILS TABLE
     ========================== */
 
-    .game-details {
-      display: grid;
-
-      grid-template-columns:
-        repeat(2, 1fr);
-
-      gap: 12px;
-    }
-
-    .detail-item {
-      padding: 15px;
-
-      background: #fff;
-
-      border: 1px solid #eeeeee;
-
-      border-radius: 14px;
-    }
-
-    .detail-item strong {
-      display: block;
-
-      margin-bottom: 4px;
-
-      font-size: 12px;
-
-      color: #999;
-    }
-
-    .detail-item span {
-      font-size: 14px;
-
-      font-weight: bold;
-    }
-
-
-    /* =========================
-       COMMENTS
-    ========================== */
-
-    .comment-box {
+    .game-specs {
       margin-top: 30px;
 
       padding: 25px;
 
       border-radius: 20px;
 
-      background: #f7f7f7;
-
       border: 1px solid #eeeeee;
-    }
-
-    .comment-box h2 {
-      margin-bottom: 15px;
-    }
-
-    .comment-input {
-      width: 100%;
-
-      min-height: 100px;
-
-      padding: 14px;
-
-      resize: vertical;
-
-      border: 1px solid #ddd;
-
-      border-radius: 14px;
-
-      outline: none;
 
       background: #fff;
+
+      box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.04);
     }
 
-    .comment-submit {
-      margin-top: 12px;
+    .game-specs h2 {
+      margin-bottom: 15px;
+      font-size: 20px;
+    }
 
-      padding: 11px 22px;
+    .spec-row {
+      display: flex;
 
-      border: none;
+      justify-content: space-between;
+      align-items: center;
 
-      border-radius: 12px;
+      gap: 15px;
 
-      background: #222;
+      padding: 12px 0;
 
-      color: #fff;
+      border-bottom: 1px solid #eeeeee;
 
-      cursor: pointer;
+      font-size: 13px;
+    }
 
+    .spec-row:last-child {
+      border-bottom: 0;
+    }
+
+    .spec-row span:first-child {
+      color: #888;
+    }
+
+    .spec-row span:last-child {
       font-weight: bold;
     }
 
-    .comment-note {
-      margin-top: 10px;
+    .official-button {
+      display: block;
 
-      color: #999;
+      margin-top: 25px;
 
-      font-size: 11px;
+      width: 100%;
+
+      padding: 14px;
+
+      border-radius: 14px;
+
+      text-align: center;
+
+      background: #222;
+      color: #fff;
+
+      font-size: 14px;
+      font-weight: bold;
+
+      transition: 0.25s;
     }
 
+    .official-button:hover {
+      background: #000;
+      transform: translateY(-2px);
+    }
+
+    .telegram-button {
+      display: block;
+
+      margin-top: 12px;
+
+      width: 100%;
+
+      padding: 13px;
+
+      border-radius: 14px;
+
+      text-align: center;
+
+      background: #f1f1f1;
+      color: #222;
+
+      font-size: 13px;
+      font-weight: bold;
+
+      transition: 0.25s;
+    }
+
+    .telegram-button:hover {
+      background: #222;
+      color: #fff;
+    }
 
     /* =========================
        DOWNLOAD PAGE
     ========================== */
 
-    .download-page {
-      max-width: 650px;
+    .download-card {
+      max-width: 600px;
 
       margin: auto;
 
-      padding: 55px 20px 70px;
+      padding: 35px 25px;
 
       text-align: center;
+
+      border-radius: 25px;
+
+      background: #fff;
+
+      border: 1px solid #eeeeee;
+
+      box-shadow:
+        0 15px 45px rgba(0, 0, 0, 0.08);
     }
 
-    .download-profile-wrapper {
-      position: relative;
-
-      width: 210px;
-      height: 210px;
-
-      margin: 0 auto 25px;
-    }
-
-    .download-profile {
-      width: 210px;
-      height: 210px;
+    .download-card img {
+      width: 160px;
+      height: 160px;
 
       object-fit: cover;
 
-      border-radius: 40px;
+      border-radius: 32px;
+
+      margin-bottom: 18px;
 
       box-shadow:
-        0 18px 50px rgba(0, 0, 0, 0.16);
+        0 12px 35px rgba(0, 0, 0, 0.15);
+    }
+
+    .download-card h1 {
+      font-size: 27px;
+      margin-bottom: 8px;
+    }
+
+    .download-card p {
+      color: #777;
+      font-size: 13px;
     }
 
     .timer {
-      position: absolute;
+      width: 75px;
+      height: 75px;
 
-      left: 50%;
-      bottom: -18px;
-
-      transform: translateX(-50%);
-
-      min-width: 55px;
-      height: 55px;
+      margin: 20px auto;
 
       display: flex;
 
@@ -730,101 +784,46 @@
       border-radius: 50%;
 
       background: #222;
-
       color: #fff;
 
-      font-size: 18px;
-
+      font-size: 24px;
       font-weight: bold;
-
-      box-shadow:
-        0 8px 25px rgba(0, 0, 0, 0.2);
     }
 
-    .download-page h1 {
-      margin-top: 35px;
-
-      margin-bottom: 8px;
-
-      font-size: 27px;
-    }
-
-    .download-page p {
-      color: #777;
-
-      font-size: 14px;
-
-      margin-bottom: 22px;
-    }
-
-    .real-download-button {
+    .download-button {
       display: block;
 
       width: 100%;
 
-      padding: 15px;
-
-      border-radius: 15px;
-
-      background: #222;
-
-      color: #fff;
-
-      font-size: 15px;
-
-      font-weight: bold;
-
-      opacity: 0.45;
-
-      pointer-events: none;
-
-      transition: 0.3s;
-    }
-
-    .real-download-button.active {
-      opacity: 1;
-
-      pointer-events: auto;
-    }
-
-    .real-download-button.active:hover {
-      background: #000;
-
-      transform: translateY(-2px);
-    }
-
-    .telegram-download {
-      display: block;
-
-      margin-top: 13px;
-
-      padding: 13px;
+      padding: 14px;
 
       border-radius: 14px;
 
-      background: #f0f0f0;
+      background: #222;
+      color: #fff;
 
-      color: #222;
-
-      font-size: 13px;
-
+      font-size: 14px;
       font-weight: bold;
 
-      transition: 0.2s;
+      border: 0;
+
+      cursor: pointer;
+
+      transition: 0.25s;
     }
 
-    .telegram-download:hover {
-      background: #e5e5e5;
+    .download-button:hover {
+      background: #000;
     }
 
-    .download-message {
-      margin-top: 18px;
+    .download-button.disabled {
+      background: #cccccc;
+      color: #777;
 
-      color: #999;
+      cursor: not-allowed;
 
-      font-size: 12px;
+      pointer-events: none;
     }
-
 
     /* =========================
        FOOTER
@@ -869,47 +868,33 @@
       font-size: 11px;
     }
 
-
     /* =========================
        ANIMATIONS
     ========================== */
 
     @keyframes fadeIn {
-
       from {
         opacity: 0;
-
-        transform:
-          translateY(12px);
+        transform: translateY(12px);
       }
 
       to {
         opacity: 1;
-
-        transform:
-          translateY(0);
+        transform: translateY(0);
       }
-
     }
 
     @keyframes slideUp {
-
       from {
         opacity: 0;
-
-        transform:
-          translateY(20px);
+        transform: translateY(20px);
       }
 
       to {
         opacity: 1;
-
-        transform:
-          translateY(0);
+        transform: translateY(0);
       }
-
     }
-
 
     /* =========================
        MOBILE
@@ -919,7 +904,6 @@
 
       header {
         padding: 12px 4%;
-
         gap: 10px;
       }
 
@@ -933,7 +917,6 @@
 
       .search {
         padding: 10px 13px;
-
         font-size: 12px;
       }
 
@@ -976,26 +959,27 @@
         font-size: 14px;
       }
 
-      .gallery {
-        grid-template-columns:
-          repeat(2, 1fr);
-      }
-
-      .gallery img {
-        height: 150px;
-      }
-
-      .game-details {
+      .screenshots {
         grid-template-columns: 1fr;
       }
 
-      .game-profile {
-        width: 150px;
-        height: 150px;
+      .screenshots img {
+        height: 260px;
       }
 
-    }
+      .game-profile h1 {
+        font-size: 23px;
+      }
 
+      .game-profile img {
+        width: 135px;
+        height: 135px;
+      }
+
+      .download-card h1 {
+        font-size: 23px;
+      }
+    }
 
     @media (max-width: 390px) {
 
@@ -1010,20 +994,11 @@
       .game-card img {
         height: 185px;
       }
-
-      .gallery img {
-        height: 130px;
-      }
-
     }
-
   </style>
-
 </head>
 
-
 <body>
-
 
   <!-- =========================
        HEADER
@@ -1050,12 +1025,11 @@
   </header>
 
 
-  <!-- =====================================================
+  <!-- =========================
        HOME PAGE
-  ====================================================== -->
+  ========================== -->
 
-  <div id="homePage">
-
+  <div id="homePage" class="page active">
 
     <!-- WELCOME -->
 
@@ -1120,15 +1094,15 @@
       </div>
 
 
-      <div
-        class="game-grid"
-        id="gameGrid"
-      >
+      <div class="game-grid" id="gameGrid">
 
 
-        <!-- GAME 1 -->
+        <!-- GAME 1 : SWAMP ATTACK -->
 
-        <article class="game-card">
+        <article
+          class="game-card"
+          data-game="swamp-attack"
+        >
 
           <div class="game-image-wrapper">
 
@@ -1155,7 +1129,8 @@
 
             <a
               class="view-game"
-              href="?page=game"
+              href="#game/swamp-attack"
+              onclick="openGame(event, 'swamp-attack')"
             >
               مشاهده بازی
             </a>
@@ -1167,7 +1142,10 @@
 
         <!-- GAME 2 -->
 
-        <article class="game-card">
+        <article
+          class="game-card"
+          data-game="game-two"
+        >
 
           <div class="game-image-wrapper">
 
@@ -1194,8 +1172,8 @@
 
             <a
               class="view-game"
-              href="#"
-              onclick="return false;"
+              href="#game/game-two"
+              onclick="openGame(event, 'game-two')"
             >
               مشاهده بازی
             </a>
@@ -1207,7 +1185,10 @@
 
         <!-- GAME 3 -->
 
-        <article class="game-card">
+        <article
+          class="game-card"
+          data-game="game-three"
+        >
 
           <div class="game-image-wrapper">
 
@@ -1234,8 +1215,8 @@
 
             <a
               class="view-game"
-              href="#"
-              onclick="return false;"
+              href="#game/game-three"
+              onclick="openGame(event, 'game-three')"
             >
               مشاهده بازی
             </a>
@@ -1260,91 +1241,36 @@
   </div>
 
 
-  <!-- =====================================================
+  <!-- =========================
        GAME DETAILS PAGE
-  ====================================================== -->
+  ========================== -->
 
-  <div
-    id="gamePage"
-    class="game-page"
-    style="display:none;"
-  >
+  <div id="detailsPage" class="page">
 
-    <a
-      href="index.html"
-      class="back-button"
-    >
-      ← برگشت به بازی‌ها
-    </a>
+    <main class="details-page">
 
-
-    <div class="game-hero">
-
-      <!-- تصویر پروفایل بازی -->
-
-      <img
-        class="game-profile"
-        src="https://placehold.co/600x600?text=Swamp+Attack"
-        alt="Swamp Attack"
+      <button
+        class="back-button"
+        onclick="goHome()"
       >
+        ← بازگشت به صفحه اصلی
+      </button>
 
 
-      <!-- نام -->
-
-      <h1>
-        Swamp Attack
-      </h1>
-
-
-      <!-- باکس دانلود -->
-
-      <div class="download-box">
-
-        <a
-          href="?page=download"
-          class="download-button"
-        >
-          ⬇️ رفتن به باکس دانلود
-        </a>
-
-      </div>
-
-    </div>
-
-
-    <!-- تصاویر بازی -->
-
-    <section>
-
-      <h2 class="gallery-title">
-        🖼️ تصاویر بازی
-      </h2>
-
-      <div class="gallery">
-
-        <!--
-          تصاویر واقعی بازی را بعداً
-          می‌توانی جای این آدرس‌ها قرار بدهی.
-        -->
+      <section class="game-profile">
 
         <img
-          src="https://placehold.co/800x500?text=Swamp+Attack+1"
-          alt="تصویر Swamp Attack 1"
+          id="detailsImage"
+          src="https://placehold.co/600x600?text=Game"
+          alt="تصویر بازی"
         >
 
-        <img
-          src="https://placehold.co/800x500?text=Swamp+Attack+2"
-          alt="تصویر Swamp Attack 2"
-        >
+        <h1 id="detailsTitle">
+          Swamp Attack
+        </h1>
 
-        <img
-          src="https://placehold.co/800x500?text=Swamp+Attack+3"
-          alt="تصویر Swamp Attack 3"
-        >
+        <p id="detailsSubtitle">
+          بازی اصلی و رسمی
+        </p>
 
-        <img
-          src="https://placehold.co/800x500?text=Swamp+Attack+4"
-          alt="تصویر Swamp Attack 4"
-        >
-
-      
+      </
