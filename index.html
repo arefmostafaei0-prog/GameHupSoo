@@ -40,6 +40,13 @@
       text-decoration: none;
     }
 
+    button,
+    input,
+    textarea {
+      font-family: inherit;
+    }
+
+
     /* =========================
        HEADER
     ========================== */
@@ -72,6 +79,7 @@
       color: #ff3b30;
     }
 
+
     /* =========================
        SEARCH
     ========================== */
@@ -102,8 +110,11 @@
     .search:focus {
       background: #ffffff;
       border-color: #222222;
-      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+
+      box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.08);
     }
+
 
     /* =========================
        WELCOME
@@ -143,6 +154,7 @@
       font-size: 15px;
     }
 
+
     /* =========================
        COOPERATION
     ========================== */
@@ -150,6 +162,7 @@
     .cooperation-wrapper {
       max-width: 1100px;
       margin: 10px auto 45px;
+
       padding: 0 20px;
     }
 
@@ -232,10 +245,13 @@
 
     .cooperation a:hover {
       transform: translateY(-3px);
+
       background: #000;
+
       box-shadow:
         0 10px 25px rgba(0, 0, 0, 0.18);
     }
+
 
     /* =========================
        GAMES
@@ -244,11 +260,13 @@
     .games {
       max-width: 1100px;
       margin: auto;
+
       padding: 20px;
     }
 
     .section-title {
       display: flex;
+
       align-items: center;
       justify-content: space-between;
 
@@ -272,6 +290,7 @@
 
       gap: 22px;
     }
+
 
     /* =========================
        GAME CARD
@@ -317,7 +336,8 @@
 
       background: #eeeeee;
 
-      transition: transform 0.4s ease;
+      transition:
+        transform 0.4s ease;
     }
 
     .game-card:hover img {
@@ -380,6 +400,7 @@
       color: #fff;
     }
 
+
     /* =========================
        NO RESULT
     ========================== */
@@ -399,149 +420,159 @@
       margin-top: 20px;
     }
 
+
     /* =========================
-       GAME PAGE
+       GAME DETAILS PAGE
     ========================== */
 
     .game-page {
-      display: none;
+      max-width: 900px;
 
-      max-width: 1000px;
       margin: auto;
 
-      padding: 35px 20px 60px;
-
-      animation: fadeIn 0.5s ease;
+      padding: 40px 20px 60px;
     }
 
-    .game-page.active {
-      display: block;
+    .back-button {
+      display: inline-block;
+
+      margin-bottom: 25px;
+
+      padding: 9px 18px;
+
+      background: #f3f3f3;
+      color: #222;
+
+      border-radius: 12px;
+
+      font-size: 13px;
+      font-weight: bold;
+
+      transition: 0.2s;
     }
 
-    .game-main-card {
-      background: #ffffff;
-
-      border: 1px solid #eeeeee;
-      border-radius: 25px;
-
-      overflow: hidden;
-
-      box-shadow:
-        0 15px 45px rgba(0, 0, 0, 0.07);
+    .back-button:hover {
+      background: #222;
+      color: #fff;
     }
 
     .game-hero {
       text-align: center;
-
-      padding: 35px 20px 25px;
-
-      background: linear-gradient(
-        135deg,
-        #f5f5f5,
-        #eeeeee
-      );
     }
 
     .game-profile {
-      width: 150px;
-      height: 150px;
+      width: 180px;
+      height: 180px;
 
       object-fit: cover;
 
-      border-radius: 30px;
+      border-radius: 35px;
+
+      display: block;
+
+      margin: 0 auto 20px;
 
       box-shadow:
-        0 15px 35px rgba(0, 0, 0, 0.15);
-
-      margin-bottom: 15px;
+        0 15px 40px rgba(0, 0, 0, 0.15);
     }
 
     .game-hero h1 {
       font-size: 30px;
-      margin-bottom: 15px;
+      margin-bottom: 20px;
     }
 
-    .download-box-button {
+    .download-box {
+      margin: 20px auto 35px;
+
+      padding: 25px;
+
+      border-radius: 22px;
+
+      background: #f6f6f6;
+
+      border: 1px solid #eeeeee;
+    }
+
+    .download-button {
       display: inline-block;
 
-      padding: 13px 30px;
+      width: 100%;
 
-      border-radius: 30px;
+      padding: 14px 20px;
+
+      border-radius: 14px;
 
       background: #222;
       color: #fff;
 
       font-weight: bold;
 
-      transition: 0.25s;
+      transition: 0.2s;
     }
 
-    .download-box-button:hover {
-      transform: translateY(-3px);
+    .download-button:hover {
       background: #000;
+
+      transform: translateY(-2px);
     }
 
-    .game-content {
-      padding: 30px;
-    }
-
-    .game-content h2 {
+    .gallery-title,
+    .details-title {
       margin-bottom: 15px;
 
       font-size: 21px;
     }
 
-    .game-content p {
-      color: #666;
-      margin-bottom: 20px;
-    }
-
-    /* =========================
-       SCREENSHOTS
-    ========================== */
-
-    .screenshots {
+    .gallery {
       display: grid;
 
       grid-template-columns:
-        repeat(auto-fit, minmax(180px, 1fr));
+        repeat(3, 1fr);
 
-      gap: 15px;
+      gap: 12px;
 
-      margin-bottom: 30px;
+      margin-bottom: 35px;
     }
 
-    .screenshots img {
+    .gallery img {
       width: 100%;
-      height: 230px;
+
+      height: 190px;
 
       object-fit: cover;
 
-      border-radius: 15px;
+      border-radius: 16px;
 
       background: #eeeeee;
     }
 
-    /* =========================
-       AD BOX
-    ========================== */
-
-    .ad-box {
+    .game-section {
       padding: 25px;
-      margin: 25px 0;
 
-      text-align: center;
+      margin-bottom: 25px;
 
-      border: 1px dashed #cccccc;
-      border-radius: 18px;
+      border-radius: 20px;
 
       background: #fafafa;
 
-      color: #999;
+      border: 1px solid #eeeeee;
     }
 
+    .game-section h2 {
+      margin-bottom: 12px;
+
+      font-size: 20px;
+    }
+
+    .game-section p {
+      color: #666;
+
+      font-size: 14px;
+    }
+
+
     /* =========================
-       GAME DETAILS
+       GAME DETAILS TABLE
     ========================== */
 
     .game-details {
@@ -551,18 +582,16 @@
         repeat(2, 1fr);
 
       gap: 12px;
-
-      margin: 20px 0 25px;
     }
 
     .detail-item {
       padding: 15px;
 
-      background: #f7f7f7;
+      background: #fff;
+
+      border: 1px solid #eeeeee;
 
       border-radius: 14px;
-
-      font-size: 14px;
     }
 
     .detail-item strong {
@@ -570,209 +599,276 @@
 
       margin-bottom: 4px;
 
-      color: #222;
+      font-size: 12px;
+
+      color: #999;
     }
 
-    .official-download {
-      display: block;
-
-      width: 100%;
-
-      padding: 15px;
-
-      text-align: center;
-
-      border-radius: 15px;
-
-      background: #222;
-      color: #fff;
-
-      font-weight: bold;
-
-      transition: 0.25s;
-    }
-
-    .official-download:hover {
-      background: #000;
-      transform: translateY(-2px);
-    }
-
-    .channel-link {
-      display: block;
-
-      width: 100%;
-
-      margin-top: 12px;
-
-      padding: 14px;
-
-      text-align: center;
-
-      border-radius: 15px;
-
-      background: #f1f1f1;
-
-      color: #222;
+    .detail-item span {
+      font-size: 14px;
 
       font-weight: bold;
     }
+
 
     /* =========================
-       BACK BUTTON
+       COMMENTS
     ========================== */
 
-    .back-button {
-      display: inline-block;
+    .comment-box {
+      margin-top: 30px;
 
-      margin-bottom: 20px;
-
-      padding: 9px 18px;
+      padding: 25px;
 
       border-radius: 20px;
 
-      background: #f1f1f1;
+      background: #f7f7f7;
 
-      color: #222;
+      border: 1px solid #eeeeee;
+    }
+
+    .comment-box h2 {
+      margin-bottom: 15px;
+    }
+
+    .comment-input {
+      width: 100%;
+
+      min-height: 100px;
+
+      padding: 14px;
+
+      resize: vertical;
+
+      border: 1px solid #ddd;
+
+      border-radius: 14px;
+
+      outline: none;
+
+      background: #fff;
+    }
+
+    .comment-submit {
+      margin-top: 12px;
+
+      padding: 11px 22px;
+
+      border: none;
+
+      border-radius: 12px;
+
+      background: #222;
+
+      color: #fff;
 
       cursor: pointer;
+
+      font-weight: bold;
     }
+
+    .comment-note {
+      margin-top: 10px;
+
+      color: #999;
+
+      font-size: 11px;
+    }
+
 
     /* =========================
        DOWNLOAD PAGE
     ========================== */
 
     .download-page {
-      display: none;
-
-      max-width: 600px;
+      max-width: 650px;
 
       margin: auto;
 
-      padding: 50px 20px;
+      padding: 55px 20px 70px;
 
       text-align: center;
-
-      animation: fadeIn 0.5s ease;
     }
 
-    .download-page.active {
-      display: block;
-    }
-
-    .download-profile {
-      width: 170px;
-      height: 170px;
-
-      object-fit: cover;
-
-      border-radius: 35px;
-
-      box-shadow:
-        0 18px 40px rgba(0, 0, 0, 0.16);
-
-      margin-bottom: 18px;
-    }
-
-    .download-page h1 {
-      margin-bottom: 20px;
-    }
-
-    .timer-box {
+    .download-profile-wrapper {
       position: relative;
 
-      width: 170px;
-      height: 170px;
+      width: 210px;
+      height: 210px;
 
       margin: 0 auto 25px;
     }
 
-    .timer-box img {
-      width: 170px;
-      height: 170px;
+    .download-profile {
+      width: 210px;
+      height: 210px;
 
       object-fit: cover;
 
-      border-radius: 35px;
+      border-radius: 40px;
+
+      box-shadow:
+        0 18px 50px rgba(0, 0, 0, 0.16);
     }
 
     .timer {
       position: absolute;
 
-      inset: 0;
+      left: 50%;
+      bottom: -18px;
+
+      transform: translateX(-50%);
+
+      min-width: 55px;
+      height: 55px;
 
       display: flex;
 
       align-items: center;
       justify-content: center;
 
-      border-radius: 35px;
+      border-radius: 50%;
 
-      background: rgba(0, 0, 0, 0.6);
+      background: #222;
 
       color: #fff;
 
-      font-size: 35px;
-      font-weight: 900;
+      font-size: 18px;
+
+      font-weight: bold;
+
+      box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.2);
     }
 
-    .download-button {
+    .download-page h1 {
+      margin-top: 35px;
+
+      margin-bottom: 8px;
+
+      font-size: 27px;
+    }
+
+    .download-page p {
+      color: #777;
+
+      font-size: 14px;
+
+      margin-bottom: 22px;
+    }
+
+    .real-download-button {
       display: block;
 
       width: 100%;
 
       padding: 15px;
 
-      margin-top: 15px;
-
-      border: none;
       border-radius: 15px;
 
       background: #222;
+
       color: #fff;
 
-      font-family: inherit;
       font-size: 15px;
+
       font-weight: bold;
 
-      cursor: pointer;
-
-      transition: 0.25s;
-    }
-
-    .download-button:hover {
-      background: #000;
-    }
-
-    .download-button.disabled {
       opacity: 0.45;
-      cursor: not-allowed;
+
+      pointer-events: none;
+
+      transition: 0.3s;
     }
 
-    .download-channel {
+    .real-download-button.active {
+      opacity: 1;
+
+      pointer-events: auto;
+    }
+
+    .real-download-button.active:hover {
+      background: #000;
+
+      transform: translateY(-2px);
+    }
+
+    .telegram-download {
       display: block;
 
-      width: 100%;
+      margin-top: 13px;
 
-      padding: 14px;
+      padding: 13px;
+
+      border-radius: 14px;
+
+      background: #f0f0f0;
+
+      color: #222;
+
+      font-size: 13px;
+
+      font-weight: bold;
+
+      transition: 0.2s;
+    }
+
+    .telegram-download:hover {
+      background: #e5e5e5;
+    }
+
+    .download-message {
+      margin-top: 18px;
+
+      color: #999;
+
+      font-size: 12px;
+    }
+
+
+    /* =========================
+       FOOTER
+    ========================== */
+
+    footer {
+      margin-top: 70px;
+
+      padding: 40px 20px;
+
+      text-align: center;
+
+      background: #f7f7f7;
+
+      border-top: 1px solid #eeeeee;
+    }
+
+    footer p {
+      color: #777;
+      font-size: 14px;
+    }
+
+    footer a {
+      display: inline-block;
 
       margin-top: 12px;
-
-      border-radius: 15px;
-
-      background: #f1f1f1;
 
       color: #222;
 
       font-weight: bold;
     }
 
-    .download-note {
-      margin-top: 18px;
-
-      color: #888;
-
-      font-size: 12px;
+    footer a:hover {
+      text-decoration: underline;
     }
+
+    .copyright {
+      margin-top: 20px;
+
+      color: #aaa;
+
+      font-size: 11px;
+    }
+
 
     /* =========================
        ANIMATIONS
@@ -782,12 +878,16 @@
 
       from {
         opacity: 0;
-        transform: translateY(12px);
+
+        transform:
+          translateY(12px);
       }
 
       to {
         opacity: 1;
-        transform: translateY(0);
+
+        transform:
+          translateY(0);
       }
 
     }
@@ -796,15 +896,20 @@
 
       from {
         opacity: 0;
-        transform: translateY(20px);
+
+        transform:
+          translateY(20px);
       }
 
       to {
         opacity: 1;
-        transform: translateY(0);
+
+        transform:
+          translateY(0);
       }
 
     }
+
 
     /* =========================
        MOBILE
@@ -814,6 +919,7 @@
 
       header {
         padding: 12px 4%;
+
         gap: 10px;
       }
 
@@ -827,6 +933,7 @@
 
       .search {
         padding: 10px 13px;
+
         font-size: 12px;
       }
 
@@ -869,24 +976,26 @@
         font-size: 14px;
       }
 
-      .game-content {
-        padding: 20px;
+      .gallery {
+        grid-template-columns:
+          repeat(2, 1fr);
       }
 
-      .game-hero h1 {
-        font-size: 24px;
+      .gallery img {
+        height: 150px;
       }
 
       .game-details {
         grid-template-columns: 1fr;
       }
 
-      .screenshots {
-        grid-template-columns:
-          repeat(2, 1fr);
+      .game-profile {
+        width: 150px;
+        height: 150px;
       }
 
     }
+
 
     @media (max-width: 390px) {
 
@@ -902,11 +1011,16 @@
         height: 185px;
       }
 
+      .gallery img {
+        height: 130px;
+      }
+
     }
 
   </style>
 
 </head>
+
 
 <body>
 
@@ -936,361 +1050,301 @@
   </header>
 
 
-  <!-- =========================
-       WELCOME
-  ========================== -->
+  <!-- =====================================================
+       HOME PAGE
+  ====================================================== -->
 
-  <section class="welcome">
-
-    <div class="welcome-badge">
-      🎮 دنیای بازی در GameHupSoo
-    </div>
-
-    <h1>
-      سلام و درود . خوش آمدید به GameHupSoo ❤️
-    </h1>
-
-    <p>
-      جدیدترین بازی‌ها و اطلاعات دنیای گیم
-    </p>
-
-  </section>
+  <div id="homePage">
 
 
-  <!-- =========================
-       COOPERATION
-  ========================== -->
+    <!-- WELCOME -->
 
-  <div class="cooperation-wrapper">
+    <section class="welcome">
 
-    <section class="cooperation">
+      <div class="welcome-badge">
+        🎮 دنیای بازی در GameHupSoo
+      </div>
 
-      <h2>
-        🤝 برای همکاری با ما به ما پیام بدید
-      </h2>
+      <h1>
+        سلام و درود . خوش آمدید به GameHupSoo ❤️
+      </h1>
 
       <p>
-        برای ارتباط و همکاری از طریق تلگرام با ما در تماس باشید.
+        جدیدترین بازی‌ها و اطلاعات دنیای گیم
       </p>
 
-      <a
-        href="https://t.me/Aref13mo"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        💬 پیام برای همکاری
-      </a>
-
     </section>
+
+
+    <!-- COOPERATION -->
+
+    <div class="cooperation-wrapper">
+
+      <section class="cooperation">
+
+        <h2>
+          🤝 برای همکاری با ما به ما پیام بدید
+        </h2>
+
+        <p>
+          برای ارتباط و همکاری از طریق تلگرام با ما در تماس باشید.
+        </p>
+
+        <a
+          href="https://t.me/Aref13mo"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          💬 پیام برای همکاری
+        </a>
+
+      </section>
+
+    </div>
+
+
+    <!-- GAMES -->
+
+    <main class="games">
+
+      <div class="section-title">
+
+        <h2>
+          🎮 بازی‌های جدید
+        </h2>
+
+        <span>
+          آخرین بروزرسانی‌ها
+        </span>
+
+      </div>
+
+
+      <div
+        class="game-grid"
+        id="gameGrid"
+      >
+
+
+        <!-- GAME 1 -->
+
+        <article class="game-card">
+
+          <div class="game-image-wrapper">
+
+            <img
+              src="https://placehold.co/600x800?text=Swamp+Attack"
+              alt="Swamp Attack"
+            >
+
+            <span class="new-badge">
+              جدید
+            </span>
+
+          </div>
+
+          <div class="game-info">
+
+            <h3>
+              Swamp Attack
+            </h3>
+
+            <div class="update">
+              🕒 آخرین آپدیت: جدید
+            </div>
+
+            <a
+              class="view-game"
+              href="?page=game"
+            >
+              مشاهده بازی
+            </a>
+
+          </div>
+
+        </article>
+
+
+        <!-- GAME 2 -->
+
+        <article class="game-card">
+
+          <div class="game-image-wrapper">
+
+            <img
+              src="https://placehold.co/600x800?text=Game+2"
+              alt="بازی نمونه دوم"
+            >
+
+            <span class="new-badge">
+              جدید
+            </span>
+
+          </div>
+
+          <div class="game-info">
+
+            <h3>
+              بازی نمونه دوم
+            </h3>
+
+            <div class="update">
+              🕒 آخرین آپدیت: ۵ روز پیش
+            </div>
+
+            <a
+              class="view-game"
+              href="#"
+              onclick="return false;"
+            >
+              مشاهده بازی
+            </a>
+
+          </div>
+
+        </article>
+
+
+        <!-- GAME 3 -->
+
+        <article class="game-card">
+
+          <div class="game-image-wrapper">
+
+            <img
+              src="https://placehold.co/600x800?text=Game+3"
+              alt="بازی نمونه سوم"
+            >
+
+            <span class="new-badge">
+              جدید
+            </span>
+
+          </div>
+
+          <div class="game-info">
+
+            <h3>
+              بازی نمونه سوم
+            </h3>
+
+            <div class="update">
+              🕒 آخرین آپدیت: ۱ هفته پیش
+            </div>
+
+            <a
+              class="view-game"
+              href="#"
+              onclick="return false;"
+            >
+              مشاهده بازی
+            </a>
+
+          </div>
+
+        </article>
+
+
+      </div>
+
+
+      <div
+        id="noResult"
+        class="no-result"
+      >
+        😕 بازی مورد نظر پیدا نشد.
+      </div>
+
+    </main>
 
   </div>
 
 
-  <!-- =========================
-       GAMES
-  ========================== -->
-
-  <main class="games" id="homePage">
-
-    <div class="section-title">
-
-      <h2>
-        🎮 بازی‌های جدید
-      </h2>
-
-      <span>
-        آخرین بروزرسانی‌ها
-      </span>
-
-    </div>
-
-
-    <div class="game-grid" id="gameGrid">
-
-
-      <!-- GAME 1 -->
-
-      <article class="game-card">
-
-        <div class="game-image-wrapper">
-
-          <!-- تصویر موقت پروفایل -->
-          <img
-            src="https://placehold.co/600x800?text=Swamp+Attack"
-            alt="Swamp Attack"
-          >
-
-          <span class="new-badge">
-            جدید
-          </span>
-
-        </div>
-
-        <div class="game-info">
-
-          <h3>
-            Swamp Attack
-          </h3>
-
-          <div class="update">
-            🕒 آخرین آپدیت: جدید
-          </div>
-
-          <a
-            class="view-game"
-            href="#"
-            onclick="openGamePage(); return false;"
-          >
-            مشاهده بازی
-          </a>
-
-        </div>
-
-      </article>
-
-
-      <!-- GAME 2 -->
-
-      <article class="game-card">
-
-        <div class="game-image-wrapper">
-
-          <img
-            src="https://placehold.co/600x800?text=Game+2"
-            alt="بازی نمونه دوم"
-          >
-
-          <span class="new-badge">
-            جدید
-          </span>
-
-        </div>
-
-        <div class="game-info">
-
-          <h3>
-            بازی نمونه دوم
-          </h3>
-
-          <div class="update">
-            🕒 آخرین آپدیت: ۵ روز پیش
-          </div>
-
-          <a
-            class="view-game"
-            href="#"
-            onclick="return false;"
-          >
-            مشاهده بازی
-          </a>
-
-        </div>
-
-      </article>
-
-
-      <!-- GAME 3 -->
-
-      <article class="game-card">
-
-        <div class="game-image-wrapper">
-
-          <img
-            src="https://placehold.co/600x800?text=Game+3"
-            alt="بازی نمونه سوم"
-          >
-
-          <span class="new-badge">
-            جدید
-          </span>
-
-        </div>
-
-        <div class="game-info">
-
-          <h3>
-            بازی نمونه سوم
-          </h3>
-
-          <div class="update">
-            🕒 آخرین آپدیت: ۱ هفته پیش
-          </div>
-
-          <a
-            class="view-game"
-            href="#"
-            onclick="return false;"
-          >
-            مشاهده بازی
-          </a>
-
-        </div>
-
-      </article>
-
-
-    </div>
-
-
-    <div
-      id="noResult"
-      class="no-result"
-    >
-      😕 بازی مورد نظر پیدا نشد.
-    </div>
-
-  </main>
-
-
-  <!-- =========================
+  <!-- =====================================================
        GAME DETAILS PAGE
-  ========================== -->
+  ====================================================== -->
 
-  <section
+  <div
     id="gamePage"
     class="game-page"
+    style="display:none;"
   >
 
     <a
-      href="#"
+      href="index.html"
       class="back-button"
-      onclick="showHome(); return false;"
     >
       ← برگشت به بازی‌ها
     </a>
 
-    <div class="game-main-card">
+
+    <div class="game-hero">
+
+      <!-- تصویر پروفایل بازی -->
+
+      <img
+        class="game-profile"
+        src="https://placehold.co/600x600?text=Swamp+Attack"
+        alt="Swamp Attack"
+      >
 
 
-      <!-- PROFILE -->
+      <!-- نام -->
 
-      <div class="game-hero">
+      <h1>
+        Swamp Attack
+      </h1>
 
-        <img
-          class="game-profile"
-          src="https://placehold.co/600x600?text=Swamp+Attack"
-          alt="Swamp Attack"
-        >
 
-        <h1>
-          Swamp Attack
-        </h1>
+      <!-- باکس دانلود -->
+
+      <div class="download-box">
 
         <a
-          href="#downloadBox"
-          class="download-box-button"
+          href="?page=download"
+          class="download-button"
         >
           ⬇️ رفتن به باکس دانلود
         </a>
 
       </div>
 
-
-      <div class="game-content">
-
-
-        <!-- SCREENSHOTS -->
-
-        <h2>
-          🖼️ تصاویر بازی
-        </h2>
-
-        <div class="screenshots">
-
-          <!-- تصاویر بازی را اینجا قرار بده -->
-
-          <img
-            src="https://placehold.co/600x1000?text=Screenshot+1"
-            alt="تصویر Swamp Attack"
-          >
-
-          <img
-            src="https://placehold.co/600x1000?text=Screenshot+2"
-            alt="تصویر Swamp Attack"
-          >
-
-          <img
-            src="https://placehold.co/600x1000?text=Screenshot+3"
-            alt="تصویر Swamp Attack"
-          >
-
-        </div>
+    </div>
 
 
-        <!-- COOPERATION -->
+    <!-- تصاویر بازی -->
 
-        <h2>
-          🤝 توضیحات همکاری
-        </h2>
+    <section>
 
-        <p>
-          برای همکاری با GameHupSoo می‌توانید از طریق آیدی زیر با ما در ارتباط باشید:
-        </p>
+      <h2 class="gallery-title">
+        🖼️ تصاویر بازی
+      </h2>
 
-        <a
-          class="channel-link"
-          href="https://t.me/Aref13mo"
-          target="_blank"
-          rel="noopener noreferrer"
+      <div class="gallery">
+
+        <!--
+          تصاویر واقعی بازی را بعداً
+          می‌توانی جای این آدرس‌ها قرار بدهی.
+        -->
+
+        <img
+          src="https://placehold.co/800x500?text=Swamp+Attack+1"
+          alt="تصویر Swamp Attack 1"
         >
-          💬 @Aref13mo
-        </a>
 
+        <img
+          src="https://placehold.co/800x500?text=Swamp+Attack+2"
+          alt="تصویر Swamp Attack 2"
+        >
 
-        <!-- AD -->
+        <img
+          src="https://placehold.co/800x500?text=Swamp+Attack+3"
+          alt="تصویر Swamp Attack 3"
+        >
 
-        <div class="ad-box">
+        <img
+          src="https://placehold.co/800x500?text=Swamp+Attack+4"
+          alt="تصویر Swamp Attack 4"
+        >
 
-          📢 محل تبلیغات
-
-          <br>
-
-          در صورت داشتن تبلیغ، محتوای تبلیغاتی خود را اینجا قرار دهید.
-
-        </div>
-
-
-        <!-- DESCRIPTION -->
-
-        <h2>
-          🎮 درباره بازی
-        </h2>
-
-        <p>
-          Swamp Attack یک بازی اکشن و دفاعی است که در آن باید از خانه خود در برابر موجودات و دشمنان مختلف دفاع کنید.
-          بازی دارای مراحل متنوع، سلاح‌های مختلف و سیستم ارتقای تجهیزات است.
-        </p>
-
-
-        <!-- DETAILS -->
-
-        <h2>
-          📋 اطلاعات بازی
-        </h2>
-
-        <div class="game-details">
-
-          <div class="detail-item">
-
-            <strong>
-              🎮 نام بازی
-            </strong>
-
-            Swamp Attack
-
-          </div>
-
-          <div class="detail-item">
-
-            <strong>
-              📱 نسخه
-            </strong>
-
-            نسخه رسمی
-
-          </div>
-
-          <div class="detail-item">
-
-            <strong>
-              
+      
